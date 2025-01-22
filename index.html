@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn_Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Nav bar start here -->
+    <nav class="navbar">
+        <!-- In nav bar there are 3 columns : left column for logo & search, center for menu items, and right for user icon -->
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <div class="search-box">
+                <img src="images/search.png" alt="">
+                <input type="text" name="search" id="search" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="navbar-center">
+            <ul>
+                <li>
+                    <a href="#" class="active-link"><img src="images/home.png" alt=""><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/network.png" alt=""><span>My Network</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/jobs.png" alt=""><span>Jobs</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/message.png" alt=""><span>Messaging</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/notification.png" alt=""><span>Notifications</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="online">
+                <img src="images/user-1.png" alt="Profile Picture" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <!-- ****************************** Profile drop down menu start here ****************************** -->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/user-1.png" alt="">
+                    <div>
+                        <h3>Rayan Walton</h3>
+                        <a href="./pages/profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png" alt="">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png" alt="">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png" alt="">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png" alt="">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- ****************************** Profile drop down menu end here ******************************** -->
+    </nav>
+    <!-- Nav bar end here -->
+
+    <div class="container">
+    <!-- Left sidebar start here -->
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="images/cover-pic.png" alt="" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="images/user-1.png" alt="">
+                    <h1>Suraj Adhikari</h1>
+                    <h3>Software Engineer at Amazon</h3>
+                    <ul>
+                        <li>Your profile views <span>100</span></li>
+                        <li>Your post views <span>550</span></li>
+                        <li>Your connections <span>150</span></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-profile-links">
+                    <a href="#"> <img src="images/items.png" alt=""> My Items </a>
+                    <a href="#"> <img src="images/premium.png" alt=""> Try Premium </a>
+                </div>
+            </div>
+
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3>RECENT</h3>
+                <a href="#"> <img src="images/recent.png" alt=""> Web Development </a>
+                <a href="#"> <img src="images/recent.png" alt=""> User Interface </a>
+                <a href="#"> <img src="images/recent.png" alt=""> Online Learning </a>
+                <a href="#"> <img src="images/recent.png" alt=""> Learn Online </a>
+                <a href="#"> <img src="images/recent.png" alt=""> Code Better </a>
+                <a href="#"> <img src="images/recent.png" alt=""> Group Learning </a>
+
+                <h3>GROUPS</h3>
+                <a href="#"> <img src="images/group.png" alt=""> Web Design Group </a>
+                <a href="#"> <img src="images/group.png" alt=""> HTML & CSS Learners </a>
+                <a href="#"> <img src="images/group.png" alt=""> JavaScript Group </a>
+                <a href="#"> <img src="images/group.png" alt=""> Learn Coding Online </a>
+
+                <h3>HASTAG</h3>
+                <a href="#"> <img src="images/hashtag.png" alt=""> webdevelopment </a>
+                <a href="#"> <img src="images/hashtag.png" alt=""> userinterface </a>
+                <a href="#"> <img src="images/hashtag.png" alt=""> onlinelearning </a>
+
+                <div class="discover-more-links">
+                    <a href="#"> Discover More</a>
+                </div>
+            </div>
+            <p id="show-more-link" onclick="toggleActivity()">Show more <b>+</b></p>
+        </div>
+
+    <!-- main content start here -->
+        <div class="main-content">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="images/user-1.png" alt="">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+
+                <div class="create-post-links">
+                    <li><img src="images/photo.png" alt="">Photo</li>
+                    <li><img src="images/video.png" alt="">Video</li>
+                    <li><img src="images/event.png" alt="">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+
+            <div class="sort-by">
+                <hr>
+                <p>Sort by : <span>top <img src="images/down-arrow.png" alt=""></span></p>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-3.png" alt="">
+                    <div>
+                        <h1>Benjamin</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aspernatur minus unde eveniet delectus ipsa expedita esse non odio dolor numquam tempora iusto at, asperiores accusantium, labore quaerat cupiditate praesentium!</p>
+                <img src="images/post-image-1.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png" alt="">
+                        <img src="images/love.png" alt="">
+                        <img src="images/clap.png" alt="">
+                        <span class="liked-users">Johnson and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>20 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-4.png" alt="">
+                    <div>
+                        <h1>Larence George</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aspernatur minus unde eveniet delectus ipsa expedita esse non odio dolor numquam tempora iusto at, asperiores accusantium, labore quaerat cupiditate praesentium!</p>
+                <img src="images/post-image-2.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png" alt="">
+                        <img src="images/love.png" alt="">
+                        <img src="images/clap.png" alt="">
+                        <span class="liked-users">Johnson and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>20 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-3.png" alt="">
+                    <div>
+                        <h1>Benjamin</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aspernatur minus unde eveniet delectus ipsa expedita esse non odio dolor numquam tempora iusto at, asperiores accusantium, labore quaerat cupiditate praesentium!</p>
+                <img src="images/post-image-3.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png" alt="">
+                        <img src="images/love.png" alt="">
+                        <img src="images/clap.png" alt="">
+                        <span class="liked-users">Johnson and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>20 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-3.png" alt="">
+                    <div>
+                        <h1>Benjamin</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aspernatur minus unde eveniet delectus ipsa expedita esse non odio dolor numquam tempora iusto at, asperiores accusantium, labore quaerat cupiditate praesentium!</p>
+                <img src="images/post-image-4.png" width="100%" alt="">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png" alt="">
+                        <img src="images/love.png" alt="">
+                        <img src="images/clap.png" alt="">
+                        <span class="liked-users">Johnson and 75 others</span>
+                    </div>
+
+                    <div>
+                        <span>20 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <img src="images/user-1.png" alt="" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/like.png" alt="">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/comment.png" alt="">
+                        <span>Comment</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/share.png" alt="">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post-activity-link">
+                        <img src="images/send.png" alt="">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    <!-- right sidebar start here -->
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="images/more.png" alt="" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,500 readers</span>
+
+                <a href="#">Careers growing horizontally too</a>
+                <span>19h ago &middot; 1000 readers</span>
+
+                <a href="#">Less work visa for US, more for UK</a>
+                <span>10h ago &middot; 9,500 readers</span>
+
+                <a href="#">More hiring = higher confidence?</a>
+                <span>1d ago &middot; 10,500 readers</span>
+
+                <a href="#" class="read-more-link"> Read More</a>
+            </div>
+
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 principle of web design</p>
+                <div>
+                    <img src="images/user-1.png" alt="">
+                    <img src="images/mi-logo.png" alt="">
+                </div>
+                <b>Brand and Demand in Xiaomi</b>
+                <a href="#" class="ad-link"> Learn More</a>
+            </div>
+
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src="images/logo.png" alt="">
+                    <p>LinkedIn &copy; 2024, All right reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html> 
